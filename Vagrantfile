@@ -11,7 +11,7 @@ Vagrant::Config.run do |config|
 
   #config.vm.boot_mode = :gui
 
-  config.vm.forward_port 80, 80
+  config.vm.forward_port 80, 8080
   config.vm.forward_port 3000, 3000
 
   #config.vm.customize ["modifyvm", :id, "--memory", 1024]
