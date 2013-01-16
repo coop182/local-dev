@@ -5,8 +5,10 @@ Vagrant development environment provisioned with shell scripts on a (linux/ubunt
 
 ## Setup Instructions
 
-1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 2. Install [Vagrant](http://downloads.vagrantup.com/) - version 1.0.6 or above.
+3. Clone `https://github.com/coop182/local-dev.git` to your computer.
+4. Run `vagrant up` in your console from the `local-dev` folder.
 
 ## Credits and info
 
