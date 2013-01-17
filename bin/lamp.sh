@@ -35,14 +35,14 @@ php-settings-update 'date.timezone' 'Europe/London'
 # Set ServerName
 ( echo "Servername localhost" | sudo tee '/etc/apache2/conf.d/servername' >/dev/null )
 
-if [ ! -d '/data' ]; then
-    sudo mkdir /data
-    sudo mkdir /data/localhost
+if [ ! -d '/vagrant/data' ]; then
+    sudo mkdir /vagrant/data
+    sudo mkdir /vagrant/data/localhost
 fi
 
 #symlink phpmyadmin to localhost
-if [ ! -d "/data/localhost/phpmyadmin" ]; then
-    sudo ln -s /usr/share/phpmyadmin/ /data/localhost/
+if [ ! -d "/vagrant/data/localhost/phpmyadmin" ]; then
+    sudo ln -s /usr/share/phpmyadmin /vagrant/data/localhost
 fi
 
 #Setup localhost virtualhost
@@ -50,10 +50,10 @@ sudo cat >/etc/apache2/sites-available/00-localhost <<EOF
 <VirtualHost *:80>
 
     ServerAdmin         admin@localhost
-    DocumentRoot        /data/localhost
+    DocumentRoot        /vagrant/data/localhost
     ServerName          localhost
 
-    <Directory /data/localhost>
+    <Directory /vagrant/data/localhost>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Order allow,deny

@@ -14,12 +14,14 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 80, 8080
   config.vm.forward_port 3000, 3000
 
+  config.vm.share_folder("v-root", "/vagrant", ".", :nfs => true)
+
   #config.vm.customize ["modifyvm", :id, "--memory", 1024]
 
   # Enable provisioning through a shell script.
   config.vm.provision :shell do |shell|
     relative     = ''
-    script       = 'provision.sh'
+    script       = 'bin/provision.sh'
     shell.inline = ERB.new("<% def import(file); File.read('#{relative}' + file); end %>" + File.read("#{relative}#{script}")).result
   end
 
