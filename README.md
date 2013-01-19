@@ -1,5 +1,5 @@
-Vagrant/Ubuntu local dev environment
-====================================
+Vagrant/Ubuntu local dev environment for OSX
+============================================
 
 Vagrant development environment provisioned with shell scripts on a (linux/ubuntu) quantal64 box.
 
@@ -8,7 +8,7 @@ Vagrant development environment provisioned with shell scripts on a (linux/ubunt
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 2. Install [Vagrant](http://downloads.vagrantup.com/) - version 1.0.6 or above.
 3. Clone `https://github.com/coop182/local-dev.git` to your computer.
-4. Run `vagrant up` in your console from the `local-dev` folder.
+4. Double click `start-server.app` - the first run will take a while.
 
 ## Credits and info
 
