@@ -7,8 +7,8 @@ echo " "
 
 cd ../../../
 vagrant up --no-provision
-mkdir share
-mount -t smbfs //guest@192.168.33.10/data share
+mkdir data
+mount -t smbfs //guest@192.168.33.10/data data
 
 echo " "
 echo "#######################################"
@@ -21,7 +21,7 @@ echo "#######################################"
 echo " "
 
 vagrant provision
-mount -t smbfs //guest@192.168.33.10/data share
+mount -t smbfs //guest@192.168.33.10/data data
 
 echo " "
 echo "#######################################"

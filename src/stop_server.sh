@@ -6,8 +6,8 @@ echo "#######################################"
 echo " "
 
 cd ../../../
-umount share
-rm -rf share
+umount data
+rm -rf data
 vagrant halt
 
 echo " "
