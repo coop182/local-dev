@@ -20,3 +20,5 @@ Vagrant development environment provisioned with shell scripts on a (linux/ubunt
 * [Provision with shell](http://vagrantup.com/v1/docs/provisioners/shell.html "shell")
 * [Host Only Networking](http://vagrantup.com/v1/docs/host_only_networking.html "host")
 * [Bridged Newtworking](http://vagrantup.com/v1/docs/bridged_networking.html "bridged")
+* [VisualPharm](http://www.visualpharm.com/) for Server Icon
+* [Platypus](http://sveinbjorn.org/platypus) for App creation

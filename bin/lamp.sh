@@ -37,12 +37,13 @@ php-settings-update 'date.timezone' 'Europe/London'
 
 if [ ! -d '/data' ]; then
     sudo mkdir /data
-    sudo mkdir /data/localhost
+    sudo mkdir /data/httpd
+    sudo mkdir /data/httpd/localhost
 fi
 
 #symlink phpmyadmin to localhost
-if [ ! -d "/data/localhost/phpmyadmin" ]; then
-    sudo ln -s /usr/share/phpmyadmin /data/localhost
+if [ ! -d "/data/httpd/localhost/phpmyadmin" ]; then
+    sudo ln -s /usr/share/phpmyadmin /data/httpd/localhost
 fi
 
 #Setup localhost virtualhost
@@ -50,10 +51,10 @@ sudo cat >/etc/apache2/sites-available/00-localhost <<EOF
 <VirtualHost *:80>
 
     ServerAdmin         admin@localhost
-    DocumentRoot        /data/localhost
+    DocumentRoot        /data/httpd/localhost
     ServerName          localhost
 
-    <Directory /data/localhost>
+    <Directory /data/httpd/localhost>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Order allow,deny
