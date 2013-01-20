@@ -7,18 +7,21 @@ Vagrant development environment provisioned with shell scripts on a (linux/ubunt
 
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 2. Install [Vagrant](http://downloads.vagrantup.com/) - version 1.0.6 or above.
-3. Clone `https://github.com/coop182/local-dev.git` to your computer.
-4. Double click `start-server.app` - the first run will take a while.
+3. Install [Git](http://git-scm.com/downloads)
+4. Clone `https://github.com/coop182/local-dev.git` to your computer.
+5. Double click `start-server.app` - the first run will take a while, it may ask for your admin password so it can update your hosts file.
+6. Browse to [http://dev.localhost](http://dev.localhost) in the browser of your choice, it should resolve.
 
 ## Credits and info
 
-* [VirtualBox](https://www.virtualbox.org "virtualbox")
-* [Vagrant](http://vagrantup.com/ "vagrant")
-* [Vagrant-dev-env](https://github.com/pixelhandler/vagrant-dev-env "vagrant-dev-env") by Bill Heaton
-* [Unbuntu.sh](https://github.com/StanAngeloff/vagrant-shell-scripts "scripts") by StanAngeloff
-* [Boxes](http://www.vagrantbox.es "boxes")
-* [Provision with shell](http://vagrantup.com/v1/docs/provisioners/shell.html "shell")
-* [Host Only Networking](http://vagrantup.com/v1/docs/host_only_networking.html "host")
-* [Bridged Newtworking](http://vagrantup.com/v1/docs/bridged_networking.html "bridged")
+* [VirtualBox](https://www.virtualbox.org)
+* [Vagrant](http://vagrantup.com/)
+* [Git](http://git-scm.com/)
+* [Vagrant-dev-env](https://github.com/pixelhandler/vagrant-dev-env) by Bill Heaton
+* [Unbuntu.sh](https://github.com/StanAngeloff/vagrant-shell-scripts) by StanAngeloff
+* [Vagrant Boxes](http://www.vagrantbox.es)
+* [Provision with shell](http://vagrantup.com/v1/docs/provisioners/shell.html)
+* [Host Only Networking](http://vagrantup.com/v1/docs/host_only_networking.html)
+* [Bridged Newtworking](http://vagrantup.com/v1/docs/bridged_networking.html)
 * [VisualPharm](http://www.visualpharm.com/) for Server Icon
 * [Platypus](http://sveinbjorn.org/platypus) for App creation
