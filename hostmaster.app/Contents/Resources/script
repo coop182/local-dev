@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 
 echo "############################################"
-echo "#####         Stopping Server!         #####"
+echo "#####   Updating Hosts, Provisioning!  #####"
 echo "############################################"
 echo " "
 
 cd ../../../
-umount data
-rm -rf data
-vagrant halt
+
+vagrant provision
+mkdir data
+mount -t smbfs //guest@192.168.33.10/data data
 
 echo " "
 echo "############################################"
-echo "#####          Server Stopped!         #####"
+echo "#####      Provisioning Finished!      #####"
 echo "############################################"
 
 sleep 1
