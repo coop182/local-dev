@@ -15,7 +15,12 @@ vm_id=$(cat .vagrant | sed "s/.*\":\"\(.*\)\"}}/\1/g")
 
 # Get the hosts
 vm_basehost=$(cat Vagrantfile | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n//g' -e "s/.*config\.vm\.host_name[^\"]*=[^\"]*\"\([^\"]*\)\".*/\1/g")
-vm_aliases=$(cat Vagrantfile | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n//g' -e "s/.*#config\.hosts\.aliases.*//g" -e "s/.*config.hosts.aliases[^(]*=[^(]*(\([^)]*\)).*/\1/g")
+if [ -f host-aliases ];
+then
+	vm_aliases=$(cat host-aliases | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g')
+else
+	vm_aliases=""
+fi
 
 # Test if hosts have been added
 hosts_exist=$(cat /private/etc/hosts | sed "s/192\.168\.33\.10.*$vm_basehost.*$vm_aliases.*#.*VAGRANT.*$vm_id/HOSTS_EXIST/g")

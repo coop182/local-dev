@@ -9,7 +9,8 @@ Vagrant development environment provisioned with shell scripts on a (linux/ubunt
 2. Install [Vagrant](http://downloads.vagrantup.com/) - version 1.0.6 or above.
 3. Install [Git](http://git-scm.com/downloads)
 4. Clone `https://github.com/coop182/local-dev.git` to your computer.
-5. Double click `start-server.app` - the first run will take a while, it may ask for your admin password so it can update your hosts file.
+5. Add any host names you want setup into `host-aliases-example` (one per line) and rename it to `host-aliases`
+5. Double click `start-server.app` - the first run will take a while, it may launch a terminal window which needs administrator access so it can update your hosts file.
 6. Browse to [http://dev.localhost](http://dev.localhost) in the browser of your choice, it should resolve.
 
 ## Credits and info

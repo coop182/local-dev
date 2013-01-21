@@ -1,1 +1,0 @@
-  config.hosts.aliases = %w(dev.invites.com)

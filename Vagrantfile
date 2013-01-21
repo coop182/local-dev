@@ -10,10 +10,9 @@ Vagrant::Config.run do |config|
   # Default host
   config.vm.host_name = "dev.localhost"
   # Other hosts to setup
-  if File.exist?("hostAliases")
-     aliases = File.open("hostAliases", "rb").read
-     aliases["\n"]= " "
-     config.hosts.aliases = aliases
+  if File.exist?("host-aliases")
+     aliases = File.open("host-aliases", "rb").read
+     config.hosts.aliases = aliases.gsub("\n", " ")
   end
 
   # IP Address of the server
