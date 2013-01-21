@@ -25,3 +25,4 @@ Vagrant development environment provisioned with shell scripts on a (linux/ubunt
 * [Bridged Newtworking](http://vagrantup.com/v1/docs/bridged_networking.html)
 * [VisualPharm](http://www.visualpharm.com/) for Server Icon
 * [Platypus](http://sveinbjorn.org/platypus) for App creation
+* [vagrant-hostmaster](https://github.com/mosaicxm/vagrant-hostmaster)
