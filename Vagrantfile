@@ -10,7 +10,11 @@ Vagrant::Config.run do |config|
   # Default host
   config.vm.host_name = "dev.localhost"
   # Other hosts to setup
-  #config.hosts.aliases = %w(dev.website1 dev.website2)
+  if File.exist?("hostAliases")
+     aliases = File.open("hostAliases", "rb").read
+     aliases["\n"]= " "
+     config.hosts.aliases = aliases
+  end
 
   # IP Address of the server
   config.vm.network :hostonly, "192.168.33.10"
