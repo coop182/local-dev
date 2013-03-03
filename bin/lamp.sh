@@ -46,6 +46,12 @@ if [ ! -d "/data/httpd/localhost/phpmyadmin" ]; then
     sudo ln -s /usr/share/phpmyadmin /data/httpd/localhost
 fi
 
+#get composer
+if [ ! -f "/usr/local/bin/composer" ]; then
+    curl -s https://getcomposer.org/installer | sudo php
+    sudo mv composer.phar /usr/local/bin/composer
+fi
+
 #Setup localhost virtualhost
 sudo cat >/etc/apache2/sites-available/00-localhost <<EOF
 <VirtualHost *:80>
