@@ -11,7 +11,7 @@ fi
 
 # Add default AFPD to end of afpd.conf file
 if grep -Lq 'transall -uamlist uams_guest.so' /etc/netatalk/afpd.conf; then
-    cat /etc/default/netatalk | sed '$a\- -transall -uamlist uams_guest.so -nosavepassword -advertise_ssh' > /etc/netatalk/afpd.conf
+    cat /etc/netatalk/afpd.conf | sed '$a\- -transall -uamlist uams_guest.so -nosavepassword -advertise_ssh' > /etc/netatalk/afpd.conf
 fi
 
 # Setup the data share in Apple
