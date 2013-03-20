@@ -48,11 +48,10 @@ apt-packages-install                 \
 
 dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 
-<%= import 'bin/mongo.sh' %>
-<%= import 'bin/node.sh' %>
 <%= import 'bin/lamp.sh' %>
 <%= import 'bin/ruby.sh' %>
 <%= import 'bin/phantom.sh' %>
-<%= import 'bin/samba.sh' %>
+#<%= #import 'bin/samba.sh' %>
+<%= import 'bin/afp.sh' %>
 
 echo 'if [ -d "/vagrant/bin" ]; then PATH=$PATH":/vagrant/bin"; fi' >> ~/.profile
