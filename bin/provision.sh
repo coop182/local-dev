@@ -48,6 +48,8 @@ apt-packages-install                 \
 
 dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 
+<%= import 'bin/mongo.sh' %>
+<%= import 'bin/node.sh' %>
 <%= import 'bin/lamp.sh' %>
 <%= import 'bin/ruby.sh' %>
 <%= import 'bin/phantom.sh' %>
