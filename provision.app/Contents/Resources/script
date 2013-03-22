@@ -36,7 +36,7 @@ fi
 
 vagrant provision
 mkdir data
-mount -t smbfs //guest@192.168.33.10/data data
+mount -t afp afp://vagrant:vagrant@192.168.33.10/local-dev data
 
 echo " "
 echo "############################################"

@@ -127,6 +127,7 @@ apt-non-interactive() {
       -o Dpkg::Options::='--force-confold' \
       -f -y -qq                            \
       --no-install-recommends              \
+      --force-yes                          \
       "$@"
 }
 
