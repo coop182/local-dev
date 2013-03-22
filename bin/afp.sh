@@ -15,7 +15,6 @@ grep 'transall -uamlist uams_guest.so' '/etc/netatalk/afpd.conf' >/dev/null || \
 grep 'local-dev' '/etc/netatalk/AppleVolumes.default' >/dev/null || \
 	( echo "/data \"local-dev\" cnidscheme:dbd options:usedots,upriv" | sudo tee -a '/etc/netatalk/AppleVolumes.default' >/dev/null )
 
-
 # Configure vagrant as owner and group of data directory
 sudo chown -R vagrant /data
 sudo chgrp -R vagrant /data
